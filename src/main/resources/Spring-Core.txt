@@ -51,4 +51,10 @@ Beans Scope: scope = life-cycle ,Default Scope --> singleton
 	@Scope annotation to define scope of bean
 	 -> @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 	 Type of scope : singleton, prototype, request, session, application, websocket
+	 
+	 Note : Prototype beans are lazy by default. There is no need to use the @Lazy annotation for prototype scopes beans
+	 
+Bean LifeCycle method:
+	- @PostConstract
+	- @PreDestroy
 	

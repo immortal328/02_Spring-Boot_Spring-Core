@@ -28,4 +28,7 @@ Dependency Injection:
 Qualifiers:
 	- If we have multiple classes which implements single interface that time @Qualifier("qualifierName") annotation is useful
 	  to let know spring which Bean need to inject.
+	  
+@Primary:
+	When we have multiple classes which implements single interface then we can only one as @Primary 
 	

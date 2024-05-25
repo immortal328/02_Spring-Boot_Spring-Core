@@ -12,14 +12,16 @@ public class RestController {
 	private Coach cricketCoach;
 	private Coach khokhoCoach;
 	private Coach volleyballCoach;
+	private Coach myTrackCoach;
 
 	// Constructor Injection
 	@Autowired
 	public RestController(@Qualifier("cricketCoach") Coach cricket, @Qualifier("khoKhoCoach") Coach khokho,
-			@Qualifier("volleyballCoach") Coach volleyball) {
+			@Qualifier("volleyballCoach") Coach volleyball,Coach trackCoach) {
 		cricketCoach = cricket;
 		khokhoCoach = khokho;
 		volleyballCoach = volleyball;
+		myTrackCoach = trackCoach;
 	}
 
 	// Setter Injection
@@ -51,5 +53,11 @@ public class RestController {
 	public String getWorkoutvolleyBall() {
 		return volleyballCoach.getDailyWorkout();
 	}
+	
+	@GetMapping("/workoutTrack")
+	public String getWorkoutTrack() {
+		return myTrackCoach.getDailyWorkout();
+	}
+	
 
 }

@@ -10,3 +10,21 @@ Spring Container:
 Dependency Injection:
 	1. Constructor Injection:
 	2. Setter Injection:
+	
+	
+@SpringBootApplication is combination of:
+	- @ComponentScan -> enable component scanning for current packages and recursively scan sub-packages
+	- @Configuration -> Able to register extra beans with @Bean / import other configuration classess
+	- @EnableAutoConfiguration -> Enable Spring Boot auto configuration support.
+	
+	SpringApplication.run() -> create application Context and register all beans & start tomcat server	
+	
+	
+@ComponentScan
+	- Start by default scanning component from base package , means from main method package
+	- After that recursively scan sub-packages
+	
+	To scan package outside base package;
+		@SpringBootApplication(scanBasePackages={"com.root.immortal",
+												 "com.bus"}
+								)

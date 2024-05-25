@@ -1,4 +1,4 @@
-package ap.immortal.classes;
+package ap.immortal.comman;
 
 import org.springframework.stereotype.Component;
 

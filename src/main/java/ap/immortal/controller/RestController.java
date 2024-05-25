@@ -12,6 +12,16 @@ public class RestController {
 	private Coach khokhoCoach;
 	private Coach volleyballCoach;
 	private Coach myTrackCoach;
+	
+	private Coach oneCoach;
+	private Coach anotherCoach;
+	
+	
+	public RestController(@Qualifier("badmintonCoach") Coach theCoach, @Qualifier("badmintonCoach") Coach theAnothercoach) {
+		oneCoach = theCoach;
+		anotherCoach = theAnothercoach;
+	}
+	
 
 	// Constructor Injection
 	@Autowired
@@ -37,6 +47,11 @@ public class RestController {
 	String get() {
 		return "Hello Spring Core..";
 	}
+	
+	@GetMapping("/checks")
+	String check() {
+		return "Comparing beans: oneCoach == anotherCoach : "+(oneCoach == anotherCoach);
+	}
 
 	@GetMapping("/workoutCricket")
 	public String getWorkoutCricket() {
@@ -57,6 +72,7 @@ public class RestController {
 	public String getWorkoutTrack() {
 		return myTrackCoach.getDailyWorkout();
 	}
+	
 	
 
 }

@@ -40,3 +40,15 @@ Lazy Initilization:
 	Solution:
 		- Global Configuration:
 			spring.main.lazy-initialization = true
+			
+Beans Scope: scope = life-cycle ,Default Scope --> singleton
+	What is singleton:
+		- Spring container create only one instance of the beans, cached it and refer same bean
+	- how long bean live ?
+	- how many instance created?
+	- how bean shared?
+	
+	@Scope annotation to define scope of bean
+	 -> @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
+	 Type of scope : singleton, prototype, request, session, application, websocket
+	

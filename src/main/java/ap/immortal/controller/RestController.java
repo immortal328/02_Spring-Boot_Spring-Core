@@ -10,16 +10,22 @@ public class RestController {
 	
 	private Coach mycoach;
 	
-	//Constructor Injection
-//	@Autowired
-//	public RestController(Coach coach) {
-//		mycoach = coach;		
-//	}
 	
+	//Constructor Injection
+	/*@Autowired
+	public RestController(Coach coach) {
+		mycoach = coach;		
+	}*/
+	
+	//Setter Injection
 	@Autowired
 	void setCoach(Coach coach) {
 		mycoach = coach;
 	}
+	
+	//Field Injection
+	/*@Autowired
+	private Coach mycoach;*/
 	
 	@GetMapping("/")
 	String get() {

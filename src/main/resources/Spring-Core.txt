@@ -8,8 +8,9 @@ Spring Container:
 		
 		
 Dependency Injection:
-	1. Constructor Injection:
-	2. Setter Injection:
+	1. Constructor Injection: - for requaired dependecies
+	2. Setter Injection: - for optional dependencies
+	3. Field Injection: - define private variable and just give @Autowired on top of it.
 	
 	
 @SpringBootApplication is combination of:

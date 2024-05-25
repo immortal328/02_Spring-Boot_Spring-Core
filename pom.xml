@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>ap.immortal</groupId>
 	<artifactId>practice-spring-core</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>Spring-Boot_Spring-Core</name>
 	<description>Practice Spring core</description>
 	<properties>

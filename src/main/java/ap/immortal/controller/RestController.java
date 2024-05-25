@@ -8,16 +8,16 @@ import ap.immortal.interfaces.Coach;
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
 	
-	private Coach coach;
+	private Coach mycoach;
 	
 	@Autowired
 	public RestController(Coach coach) {
-		this.coach = coach;		
+		mycoach = coach;		
 	}
 	
 	@GetMapping("/dailyWorkout")
 	public String getWorkout(Coach coach) {
-		return coach.getDailyWorkout();
+		return mycoach.getDailyWorkout();
 	}
 
 }

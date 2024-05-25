@@ -1,0 +1,37 @@
+spring:
+  profiles:
+    active: test
+  application:
+    name: Spring-Boot_Spring-Core  
+  security:
+    user:
+      name: test
+      password: test
+      
+#server:
+#  port: 2828
+#  servlet:
+#    context-path: /immortals
+  
+info:
+  app:
+    name: Spring-Boot_Learning_App
+    description: Just_for_Learning
+    version: 1.0.0
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: 
+        
+props:
+  name: 
+    firstName: Tony
+    lastName: Stark
+      
+  
+
+
+

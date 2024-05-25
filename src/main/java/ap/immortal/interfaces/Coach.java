@@ -1,7 +1,6 @@
 package ap.immortal.interfaces;
 
-public interface Coach {
-	
+@FunctionalInterface
+public interface Coach {	
 	public String getDailyWorkout();
-
 }

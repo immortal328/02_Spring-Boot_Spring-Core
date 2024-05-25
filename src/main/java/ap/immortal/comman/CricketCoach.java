@@ -9,7 +9,7 @@ public class CricketCoach implements Coach  {
 
 	@Override
 	public String getDailyWorkout() {
-		return "Watch YouTube video and do it yourself...";
+		return "Bolwe fast as much as much you can...";
 	}
 	
 	

@@ -11,7 +11,4 @@ public class CricketCoach implements Coach  {
 	public String getDailyWorkout() {
 		return "Bolwe fast as much as much you can...";
 	}
-	
-	
-
 }

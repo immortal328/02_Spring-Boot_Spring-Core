@@ -10,9 +10,20 @@ public class RestController {
 	
 	private Coach mycoach;
 	
+	//Constructor Injection
+//	@Autowired
+//	public RestController(Coach coach) {
+//		mycoach = coach;		
+//	}
+	
 	@Autowired
-	public RestController(Coach coach) {
-		mycoach = coach;		
+	void setCoach(Coach coach) {
+		mycoach = coach;
+	}
+	
+	@GetMapping("/")
+	String get() {
+		return "Hello Spring Core..";
 	}
 	
 	@GetMapping("/dailyWorkout")

@@ -58,3 +58,13 @@ Bean LifeCycle method:
 	- @PostConstract
 	- @PreDestroy
 	
+@java config Bean
+	@Bean
+		-> if you have class in project then you can use @Component to crate beans
+			but, what about if you have third-party class , then time you can use @Bean and make that class available as Spring Bean
+	How to create java config bean:
+		1. create class #Configuration
+		2. Add method with @Bean 
+		3. return with new keyword.
+		4. Add Qualifier name as @Bean Method name
+	

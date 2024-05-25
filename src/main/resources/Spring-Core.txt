@@ -1,4 +1,3 @@
-
 Spring Container:
 	- Special type spring object which help us to configure spring setup.
 	
@@ -6,12 +5,10 @@ Spring Container:
 		1. Inversion Of Control (IoC) - Creating and management of Object.
 		2. Dependency Injection - Inject Object Dependencies.
 		
-		
 Dependency Injection:
 	1. Constructor Injection: - for requaired dependecies
 	2. Setter Injection: - for optional dependencies
 	3. Field Injection: - define private variable and just give @Autowired on top of it.
-	
 	
 @SpringBootApplication is combination of:
 	- @ComponentScan -> enable component scanning for current packages and recursively scan sub-packages
@@ -20,7 +17,6 @@ Dependency Injection:
 	
 	SpringApplication.run() -> create application Context and register all beans & start tomcat server	
 	
-	
 @ComponentScan
 	- Start by default scanning component from base package , means from main method package
 	- After that recursively scan sub-packages
@@ -28,4 +24,8 @@ Dependency Injection:
 	To scan package outside base package;
 		@SpringBootApplication(scanBasePackages={"com.root.immortal",
 												 "com.bus"}
-								)
+								)			
+Qualifiers:
+	- If we have multiple classes which implements single interface that time @Qualifier("qualifierName") annotation is useful
+	  to let know spring which Bean need to inject.
+	

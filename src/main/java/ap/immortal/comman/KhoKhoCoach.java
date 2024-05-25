@@ -6,11 +6,12 @@ import org.springframework.stereotype.Component;
 import ap.immortal.interfaces.Coach;
 
 @Component
-//@Qualifier("cricketCoach")
-public class CricketCoach implements Coach  {
+//@Qualifier("khokhoCoach")
+public class KhoKhoCoach implements Coach {
 
 	@Override
 	public String getDailyWorkout() {
-		return "Bolwe fast as much as much you can...";
+		return "Just Do warmup..I will teach you Kho kho ..no need to learn";
 	}
+
 }

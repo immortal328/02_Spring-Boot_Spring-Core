@@ -1,0 +1,12 @@
+
+Spring Container:
+	- Special type spring object which help us to configure spring setup.
+	
+	Primary functions are:
+		1. Inversion Of Control (IoC) - Creating and management of Object.
+		2. Dependency Injection - Inject Object Dependencies.
+		
+		
+Dependency Injection:
+	1. Constructor Injection:
+	2. Setter Injection:

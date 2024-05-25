@@ -32,3 +32,11 @@ Qualifiers:
 @Primary:
 	When we have multiple classes which implements single interface then we can only one as @Primary 
 	
+Lazy Initilization:
+	@Lazy:
+		- It will only Initilize When it needed or Explicitly initilize
+		- fine when we have less classes but cause problem when have larger number of classes
+		then its problem ?
+	Solution:
+		- Global Configuration:
+			spring.main.lazy-initialization = true

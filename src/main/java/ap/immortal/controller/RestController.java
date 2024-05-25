@@ -8,7 +8,6 @@ import ap.immortal.interfaces.Coach;
 
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
-
 	private Coach cricketCoach;
 	private Coach khokhoCoach;
 	private Coach volleyballCoach;

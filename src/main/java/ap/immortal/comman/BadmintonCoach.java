@@ -1,22 +1,21 @@
 package ap.immortal.comman;
 
-import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 import ap.immortal.interfaces.Coach;
 
-@Primary
+//@Lazy - Component Level Lazy Initialization Enable
 @Component
-public class TrackCoach implements Coach {
+public class BadmintonCoach implements Coach{
 	
-	TrackCoach(){
+	BadmintonCoach(){
 		System.out.println("in constructor : "+ getClass().getSimpleName());
 	}
 
-	
 	@Override
 	public String getDailyWorkout() {
-		return "Run at least 20 minute with 10.5 Km/h speed..";
+		return "We need to Observe workout carefully..";
 	}
 
 }

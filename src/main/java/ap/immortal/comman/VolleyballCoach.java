@@ -1,13 +1,15 @@
 package ap.immortal.comman;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import ap.immortal.interfaces.Coach;
 
 @Component
-//@Qualifier("volleballCoach")
 public class VolleyballCoach implements Coach{
+	
+	VolleyballCoach(){
+		System.out.println("in constructor : "+ getClass().getSimpleName());
+	}
 
 	@Override
 	public String getDailyWorkout() {

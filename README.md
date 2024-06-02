@@ -2,38 +2,39 @@
 
 Github repo for Core knowledge of Spring and its implementation:
 
-Spring Container:
+# Spring Container :
 	- Special type spring object which help us to configure spring setup.
 	Primary functions are:
 		1. Inversion Of Control (IoC) - Creating and management of Object.
 		2. Dependency Injection - Inject Object Dependencies.
 		
-Dependency Injection:
+# Dependency Injection:
 	1. Constructor Injection: - for requaired dependecies
 	2. Setter Injection: - for optional dependencies
 	3. Field Injection: - define private variable and just give @Autowired on top of it.
-	
-@SpringBootApplication is combination of:
+# SpringBootApplication :
+	@SpringBootApplication is combination of:
 	- @ComponentScan -> enable component scanning for current packages and recursively scan sub-packages
 	- @Configuration -> Able to register extra beans with @Bean / import other configuration classess
 	- @EnableAutoConfiguration -> Enable Spring Boot auto configuration support.
 	SpringApplication.run() -> create application Context and register all beans & start tomcat server	
-	
-@ComponentScan
+# ComponentScan :	
+	@ComponentScan
 	- Start by default scanning component from base package , means from main method package
 	- After that recursively scan sub-packages
 	To scan package outside base package;
 		@SpringBootApplication(scanBasePackages={"com.root.immortal",
 												 "com.bus"}
 								)			
-Qualifiers:
+# Qualifiers :
+	Qualifiers
 	- If we have multiple classes which implements single interface that time @Qualifier("qualifierName") annotation is useful
 	  to let know spring which Bean need to inject.
-	  
-@Primary:
+# Primary :	  
+	@Primary:
 	When we have multiple classes which implements single interface then we can only one as @Primary 
 	
-Lazy Initilization:
+# Lazy Initilization :
 	@Lazy:
 		- It will only Initilize When it needed or Explicitly initilize
 		- fine when we have less classes but cause problem when have larger number of classes
@@ -42,7 +43,8 @@ Lazy Initilization:
 		- Global Configuration:
 			spring.main.lazy-initialization = true
 			
-Beans Scope: scope = life-cycle ,Default Scope --> singleton
+# Beans Scope: 
+	scope = life-cycle ,Default Scope --> singleton
 	What is singleton:
 		- Spring container create only one instance of the beans, cached it and refer same bean
 	- how long bean live ?
@@ -53,11 +55,11 @@ Beans Scope: scope = life-cycle ,Default Scope --> singleton
 	 Type of scope : singleton, prototype, request, session, application, websocket
 	 Note : Prototype beans are lazy by default. There is no need to use the @Lazy annotation for prototype scopes beans
 	 
-Bean LifeCycle method:
+# Bean LifeCycle method:
 	- @PostConstract
 	- @PreDestroy
 	
-@java config Bean
+# java config Bean
 	@Bean
 		-> if you have class in project then you can use @Component to crate beans
 			but, what about if you have third-party class , then time you can use @Bean and make that class available as Spring Bean
